@@ -1,0 +1,22 @@
+fileFormatVersion: 2
+guid: 93fbabd75f736c248874df6af6a62b11
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontNames:
+  - Pusab
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: 44ab4a3a72d60054d817ea6fbab71a37, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  shouldRoundAdvanceValue: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
