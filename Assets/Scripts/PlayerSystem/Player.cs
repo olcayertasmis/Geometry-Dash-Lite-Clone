@@ -127,14 +127,6 @@ namespace PlayerSystem
                 _isGround = true;
                 _isJumping = false;
             }
-
-            if (other.gameObject.CompareTag("Portal"))
-            {
-                var portal = other.gameObject.GetComponent<Portal>();
-                ChangeMotionState(portal.GetPortalMotionState(), portal.GetPortalSpeedState());
-            }
-
-            if (other.gameObject.CompareTag("Finish")) SceneManager.LoadScene("Finish");
         }
 
         private void OnCollisionExit2D(Collision2D other)
@@ -144,6 +136,17 @@ namespace PlayerSystem
                 _isGround = false;
                 tailParticle.SetActive(false);
             }
+        }
+
+        private void OnTriggerEnter2D(Collider2D other)
+        {
+            if (other.gameObject.CompareTag("Portal"))
+            {
+                var portal = other.gameObject.GetComponent<Portal>();
+                ChangeMotionState(portal.GetPortalMotionState(), portal.GetPortalSpeedState());
+            }
+
+            if (other.gameObject.CompareTag("Finish")) SceneManager.LoadScene("Finish");
         }
 
         #endregion
